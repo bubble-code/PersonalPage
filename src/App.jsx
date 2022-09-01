@@ -1,12 +1,15 @@
 /* eslint-disable react/react-in-jsx-scope */
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
-import ChangeTitle from './component/changeTitle/changeTitle';
+import MainRouter from './router/MainRouter';
 
 function App() {
   return (
-    <div>
-      <ChangeTitle pageTitle="React Hooks - useTitle" />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainRouter />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

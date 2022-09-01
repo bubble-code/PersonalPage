@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
-function ChangeTitle({ pageTitle }) {
+function PageTitle({ pageTitle }) {
   useEffect(() => {
     document.title = pageTitle;
   }, [pageTitle]);
 }
 
-export default ChangeTitle;
+export default PageTitle;
