@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import TabTwo from '../Tab/TabAbout';
 
 function About({ titleAbout, descriptionAbout }) {
   return (
@@ -29,7 +30,7 @@ function About({ titleAbout, descriptionAbout }) {
                       </div>
 
                       <div className="row mt--30">
-                        {/*  <TabTwo tabStyle="tab-style--1" /> */}
+                        <TabTwo tabStyle="tab-style--1" />
                       </div>
                     </div>
                   </div>

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   FaTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaGithub,
 } from 'react-icons/fa';
@@ -18,6 +18,21 @@ const SocialShare = [
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 function Header({ homeLink, color }) {
+  useEffect(() => {
+    const header = document.querySelector('header');
+    function handleScroll() {
+      const scrollPos = window.scrollY;
+      if (scrollPos > 100) {
+        header.classList.add('sticky');
+      } else {
+        header.classList.remove('sticky');
+      }
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   const logoUrl = (
     <img
       style={{ width: '30px', opacity: 0.8 }}
