@@ -8,6 +8,8 @@ import { TypeAnimation } from 'react-type-animation';
 import PageTitle from '../component/changeTitle/changeTitle';
 import Header from '../component/header/Header';
 import { snow } from './snow';
+import About from '../component/About/About';
+import { title, description } from '../assets/text/textPageIn';
 
 const SlideList = [
   {
@@ -86,6 +88,7 @@ function PortfolioLanding() {
           }
         </div>
       </div>
+      <About titleAbout={title} descriptionAbout={description} />
     </div>
   );
 }
