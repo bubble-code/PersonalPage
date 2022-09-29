@@ -16,6 +16,7 @@
     "react-tabs": "^5.1.0",
     "react-tsparticles": "^2.2.4",
     "react-type-animation": "^2.1.0",
+    "three": "^0.145.0",
     "tsparticles": "^2.2.4",
     "web-vitals": "^2.1.4"
   },

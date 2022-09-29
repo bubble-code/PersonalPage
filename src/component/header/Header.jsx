@@ -1,20 +1,10 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import {
-  FaTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaGithub,
-} from 'react-icons/fa';
+
 import Scrollspy from 'react-scrollspy';
 import logoSrc from '../../assets/images/logo/logo.png';
-
-// eslint-disable-next-line no-unused-vars
-const SocialShare = [
-  { Social: <FaTwitter />, link: 'https://twitter.com/alejandro_oficial' },
-  { Social: <FaInstagram />, link: 'https://www.instagram.com/alejandro_oficial' },
-  { Social: <FaFacebookF />, link: 'https://www.facebook.com/alejandro.oficial' },
-  { Social: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/alejandro-oficial' },
-  { Social: <FaGithub />, link: 'http://' },
-];
+import SocialShare from './socialShare';
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 function Header({ homeLink, color }) {
@@ -44,9 +34,6 @@ function Header({ homeLink, color }) {
     <header className={`header-area header-style-two header--fixed ${color}`}>
       <div className="header-wrapper">
         <div className="header-left d-flex align-items-center">
-          <div className="logo">
-            <a href={homeLink}>{logoUrl}</a>
-          </div>
           <nav className="mainmenunav d-lg-block ml--50">
             <Scrollspy
               className="mainmenu"
